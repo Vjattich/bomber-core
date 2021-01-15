@@ -15,9 +15,11 @@ You can run this module in docker with rabbitmq with it.
 3. docker run -d --network bomber_net --name bomber-core bomber-core
 
 ## TODO
-####Tests
-####Logging
-####Services
+#### Tests
+
+#### Logging
+
+#### Services
 
 ## License 
 
