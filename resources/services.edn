@@ -1,0 +1,87 @@
+;{:url ""
+;  :method       :post
+;  :content-type :json
+;  :form-params  {}}
+
+; number-formats:
+; international - +* (***) ***-**-**
+; e164 - +***********
+; rfc3966 - tel:+*-***-***-**-**
+; default - ***********
+
+[{:url          "https://youla.ru/web-api/auth/request_code"
+  :method       :post
+  :content-type :json
+  :region       :ru
+  :form-params  {:phone :?}}
+
+ {:url          "https://24htv.platform24.tv/v2/otps"
+  :method       :post
+  :content-type :json
+  :region       :ru
+  :form-params  {:phone :?}}
+
+ ; todo need start with 8
+ ; {:url          "https://maxi.today/api/v3/registration/phone"
+ ;  :method       :post
+ ;  :content-type :json
+ ;  :region       :ru
+ ;  :format       :international
+ ;  :form-params  {:need_with_8 :?}}
+
+ ;todo half work
+ ;{:url          "https://app.benzuber.ru/login"
+ ; :method       :post
+ ; :content-type :json
+ ; :region       :ru
+ ; :format       :international
+ ; :form-params  {:phone :?}}
+
+ ;{:url          "https://cinema5.ru/sign_up/start"
+ ; :method       :post
+ ; :content-type :json
+ ; :region       :ru
+ ; :form-params  {:phone :?}}
+
+ ; {:url          "https://api-prime.anytime.global/api/v2/auth/sendVerificationCode"
+ ;  :method       :post
+ ;  :content-type :json
+ ;  :region       :ru
+ ;  :form-params  {:phone :?}}
+
+ ; {:url          "https://oauth.av.ru/check-phone"
+ ;  :method       :post
+ ;  :content-type :json
+ ;  :region       :ru
+ ;  :format       :international
+ ;  :form-params  {:phone :?}}
+
+ ; {:url          "https://bamper.by/registration/?step=1"
+ ;  :method       :post
+ ;  :content-type :json
+ ;  :region       :ru
+ ;  :format       :e164
+ ;  :form-params  {:phone  :?,
+ ;                 :submit "Запросить смс подтверждения",
+ ;                 :rules  "on"}}
+ ; {:url          "http://api.rozamira-azs.ru/v1/auth"
+ ;  :method       :post
+ ;  :content-type :json
+ ;  :form-params  {:login :?}}
+
+ ; {:url          "https://win.1admiralxxx.ru/api/en/register.json"
+ ;  :method       :post
+ ;  :content-type :json
+ ;  :form-params  {:mobile    :?,
+ ;                 :bonus     "signup",
+ ;                 :agreement 1,
+ ;                 :currency  "RUB",
+ ;                 :submit    1,
+ ;                 :email     "",
+ ;                 :lang      "en"}}
+
+ ; {:url          "https://alfalife.cc/auth.php"
+ ;  :method       :post
+ ;  :content-type :json
+ ;  :form-params  {:phone :?}}
+ ]
