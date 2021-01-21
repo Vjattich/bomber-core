@@ -5,13 +5,13 @@
    :url  "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.10.1"]
                  [org.clojure/data.json "1.0.0"]
+                 [org.clojure/tools.logging "1.1.0"]
                  [clj-http "3.10.3"]
                  [cheshire "5.6.1"]
-                 [org.apache.logging.log4j/log4j-api "2.11.0"]
-                 [org.apache.logging.log4j/log4j-core "2.11.0"]
-                 [org.apache.logging.log4j/log4j-1.2-api "2.11.0"]
                  [io.randomseed/phone-number "8.12.4-2"]
-                 [com.novemberain/langohr "5.2.0"]]
+                 [com.novemberain/langohr "5.2.0" :exclusions [org.slf4j/slf4j-api]]
+                 [org.slf4j/slf4j-api "1.7.30"]
+                 [org.slf4j/slf4j-simple "1.7.30"]]
   :repl-options {:init-ns bomber.core}
   :source-paths ["src"]
   :main bomber.core
