@@ -8,12 +8,12 @@
   (:gen-class))
 
 (defn init-connect
-  [settings]
-  (let [conn   (rmq/connect settings)
+  [services-path rabbit-settings]
+  (let [conn   (rmq/connect rabbit-settings)
         ch     (lch/open conn)
         qname  "simple-bomb-queue"
         exname "simple-bomb"
         queue  (.getQueue (lq/declare ch qname {:exclusive false :auto-delete false}))]
     (lex/fanout ch exname {:auto-delete false})
     (lq/bind ch queue exname)
-    (lc/subscribe ch qname handler/on-simple-message {:auto-ack true})))
+    (lc/subscribe ch qname (handler/on-simple-message services-path) {:auto-ack true})))
