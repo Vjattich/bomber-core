@@ -16,6 +16,7 @@
      (slurp
       (io/resource "services.edn")))))
   ([filepath]
-   ((edn/read-string
+   (add-async
+    (edn/read-string
      (slurp
       (io/file filepath))))))

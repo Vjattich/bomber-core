@@ -9,4 +9,4 @@
     (connector/init-connect)))
   ([services-path rabbit-host]
    (->
-    (connector/init-connect {:host rabbit-host}))))
+    (connector/init-connect services-path {:host rabbit-host}))))

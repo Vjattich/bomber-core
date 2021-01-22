@@ -2,6 +2,7 @@
   (:require [clj-http.client :as client]
             [bomber.service.formatter :as formatter])
   (:import (java.util.concurrent TimeoutException TimeUnit))
+  (:use clojure.tools.logging)
   (:gen-class))
 
 (defn- get-path [endpoint data]
@@ -36,6 +37,6 @@
        (.get
          (client/request
           (correct service fomatted-number)
-          (fn [x] (println "response is:" x))
-          (fn [x] (println (:url service) "for" fomatted-number "exception message is: " (.getMessage x)))))
+          (fn [x] (info "response is:" x))
+          (fn [x] (error (:url service) "for" fomatted-number "exception message is: " (.getMessage x)))))
        5 TimeUnit/SECONDS))))
