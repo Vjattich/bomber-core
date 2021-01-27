@@ -10,13 +10,8 @@
 
 (defn get-services
   "parse resources for usage"
-  ([]
-   (add-async
-    (edn/read-string
-     (slurp
-      (io/resource "services.edn")))))
-  ([filepath]
-   (add-async
-    (edn/read-string
-     (slurp
-      (io/file filepath))))))
+  [filepath]
+  (add-async
+   (edn/read-string
+    (slurp
+     (io/file filepath)))))
