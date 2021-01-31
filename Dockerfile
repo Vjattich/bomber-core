@@ -1,6 +1,6 @@
 FROM clojure
 RUN mkdir -p /usr/src/bomber-core
-WORKDIR /usr/src//bomber-core
+WORKDIR /usr/src/bomber-core
 COPY project.clj /usr/src/bomber-core/
 COPY services/services.edn /usr/src/bomber-core/services/
 RUN lein deps
