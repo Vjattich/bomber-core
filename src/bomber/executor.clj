@@ -34,6 +34,7 @@
     phonenumber]
    (doseq [service services]
      (let [fomatted-number (formatter/format-number phonenumber (:region service) (:format service))]
+       (info "bomb on" (:url service) "for " fomatted-number)
        (.get
          (client/request
           (correct service fomatted-number)
