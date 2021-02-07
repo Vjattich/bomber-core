@@ -10,7 +10,7 @@ If you know how to improve it make pull request, or write me directly.
 
 You can run this module in docker with rabbitmq with it.
 
-1. docker build -t bomber-core .
+1. docker build . -t bomber-core .
 2. docker run -d --network bomber_net --name bomber-core -e {rabbit_host} -e {services_path} bomber-core
 
 ## TODO
